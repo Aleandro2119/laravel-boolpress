@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes(['register' => true]);
+Auth::routes(['register' => false]);
 
 Route::middleware('auth')
     ->namespace('Admin')
@@ -23,10 +23,6 @@ Route::middleware('auth')
         Route::get('/', 'HomeController@index');
         Route::resource('/posts', 'PostController');
     });
-
-Route::get('/', function () {
-    return view('guest.home');
-});
 
 Route::get('{any?}', function () {
     return view('guest.home');

@@ -1,15 +1,20 @@
 <template>
   <div class="container">
-    <PostCard />
+    <div class="row" v-if="posts.length">
+      <PostCard v-for="post in posts" :key="post.id" :post="post" />
+    </div>
+    <Paginate />
   </div>
 </template>
 
 <script>
 import PostCard from "./PostCard.vue";
+import Paginate from "../Paginate.vue";
 export default {
   name: "PostsList",
   components: {
     PostCard,
+    Paginate,
   },
   data() {
     return {
