@@ -5,6 +5,7 @@ Vue.use(VueRouter)
 
 
 import PostDetail from './components/pages/PostDetail.vue'
+import Contact from './components/pages/Contact.vue'
 
 
 
@@ -14,6 +15,7 @@ const router = new VueRouter({
     routes: [
 
         { path: '/posts/:slug', component: PostDetail, name: 'post-detail' },
+        { path: '/about', component: Contact },
     ],
 })
 
