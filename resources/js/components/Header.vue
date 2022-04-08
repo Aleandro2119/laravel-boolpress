@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">Boolpress</a>
+      <a class="navbar-brand" to="/">Boolpress</a>
       <button
         class="navbar-toggler"
         type="button"

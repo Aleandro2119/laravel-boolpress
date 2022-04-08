@@ -3,8 +3,8 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 
-
-import PostDetail from './components/pages/PostDetail.vue'
+import Home from './components/pages/Home.vue'
+import PostDetail from './components/pages/PostDatail.vue'
 import Contact from './components/pages/Contact.vue'
 
 
@@ -13,8 +13,8 @@ const router = new VueRouter({
     mode: 'history',
     linkExactActiveClass: 'active',
     routes: [
-
-        { path: '/posts/:slug', component: PostDetail, name: 'post-detail' },
+        { path: '/', component: Home },
+        { path: '/posts/:slug', component: PostDatail, name: 'post-detail' },
         { path: '/about', component: Contact },
     ],
 })
