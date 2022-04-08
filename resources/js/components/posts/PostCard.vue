@@ -7,6 +7,14 @@
           <span :class="`badge badge-pill badge-${post.category.color}`"
             >{{ post.category.label }}
           </span>
+          <div>
+            <router-link
+              v-if="!$route.params.slug"
+              class="btn btn-sm btn-danger"
+              :to="{ name: 'post-detail', params: { slug: post.slug } }"
+              >Vedi</router-link
+            >
+          </div>
         </h5>
         <p class="card-text">
           {{ post.description }}

@@ -23,7 +23,9 @@
         class="page-item"
         role="button"
         v-if="currentPage < lastPage"
-        @click="$emit('on-page-change', currentPage + 1)"
+        @click="
+          currentPage == page ? '' : $emit('on-page-change', currentPage + 1)
+        "
       >
         <span class="page-link">Next</span>
       </li>
